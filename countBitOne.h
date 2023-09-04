@@ -7,4 +7,5 @@
 
 
 uint32_t sumOdd(uint32_t n);
+uint32_t isSortArray(const uint32_t *arr, uint32_t numOfElem);
 #endif //LEARNMISRAC2012_COUNTBITONE_H
