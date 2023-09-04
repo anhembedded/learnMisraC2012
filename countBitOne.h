@@ -1,0 +1,10 @@
+//
+// Created by PC on 8/20/2023.
+//
+
+#ifndef LEARNMISRAC2012_COUNTBITONE_H
+#define LEARNMISRAC2012_COUNTBITONE_H
+
+
+uint32_t sumOdd(uint32_t n);
+#endif //LEARNMISRAC2012_COUNTBITONE_H
