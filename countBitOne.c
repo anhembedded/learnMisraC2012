@@ -7,6 +7,7 @@
 
 
 
+
 uint32_t sumOdd(uint32_t n)
 {
     uint32_t u32L_sumOdd = 0U;
@@ -50,7 +51,7 @@ uint32_t isSortArray(const uint32_t *arr, uint32_t numOfElem)
     uint32_t res;
     uint32_t isDescending = 1U;
     uint32_t isAscending = 1U;
-    if((numOfElem <= 10000U) && (arr != NULL))
+    if((numOfElem <= 10000U) && (arr != (void*)0))
     {
         if(numOfElem <= 2U)
         {
