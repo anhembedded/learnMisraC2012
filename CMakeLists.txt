@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(learnMisraC2012 main.c
         countBitOne.c
-        countBitOne.h)
+        countBitOne.h
+        isPowerOfFour.h
+        isPowerOfFour.c)

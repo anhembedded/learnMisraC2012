@@ -29,26 +29,6 @@ uint32_t sumOdd(uint32_t n)
     return (u32L_sumOdd);
 }
 
-uint32_t isPowerOfFour(uint32_t numb)
-{
-    uint32_t res;
-    if ((numb <= 0U) || (numb >= 10000U))
-    {
-        if ((numb % 4U) == 0U)
-        {
-            res = 1U;
-        }
-        else
-        {
-            res = 0U;
-        }
-    }
-    else
-    {
-        res = 2U;
-    }
-    return res;
-}
 
 uint32_t isSortArray(const uint32_t *arr, uint32_t numOfElem)
 {
