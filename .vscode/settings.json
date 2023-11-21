@@ -2,6 +2,7 @@
     "files.associations": {
         "countbitone.h": "c",
         "cstddef": "c",
-        "yvals_core.h": "c"
+        "yvals_core.h": "c",
+        "stdint.h": "c"
     }
 }
