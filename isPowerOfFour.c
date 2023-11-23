@@ -1,6 +1,12 @@
 #include "isPowerOfFour.h"
 #include <math.h>
 
+/*!
+ * Calculates the factorial of a given non-negative integer.
+ *
+ * @param n The non-negative integer for which to calculate the factorial.
+ * @return The factorial of n, or 0 if n is greater than 25.
+ */
 static uint32_t factorial(uint32_t n)
 {
     uint32_t res = 0U;
