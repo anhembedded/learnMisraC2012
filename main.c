@@ -1,12 +1,14 @@
-#include <stdio.h>
-#include <stdint.h>
 #include "countBitOne.h"
+#include <stdint.h>
+#include <stdio.h>
 
-static uint32_t go = 0;
-static uint32_t accsending[10] = {1U,2U,3u,2u,4u,5u,12U,34U,45U,333U};
-static char letter = 'a';
-int32_t main(void) {
+int32_t main(void)
+{
+    uint8_t var1 = 5u;
+    uint8_t var2 = 7u;
+    uint32_t var3 = var1 + var2;
 
-   
-return 0;
+    printf("%d", var3);
+
+    return 0;
 }
