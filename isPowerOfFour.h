@@ -3,6 +3,6 @@
 #include <stdint.h>
 #include <stddef.h>
 
-uint32_t numberOfCombinations (uint32_t n, uint32_t k);
+char* decodeMorseCode(const char* s,uint32_t numbOfString);
 
 #endif /* F0B001EC_6101_435E_9243_ECB0B0B75672 */

@@ -5,6 +5,7 @@
         "yvals_core.h": "c",
         "stdint.h": "c",
         "ispoweroffour.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "stdbool.h": "c"
     }
 }

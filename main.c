@@ -1,11 +1,11 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "isPowerOfFour.h"
-
+const char * helloWorldMorse = ".... . .-.. .-.. --- / .-- --- .-. .-.. -..";
 int32_t main(void)
 {
     
-    printf("%d",numberOfCombinations(4,3));
+   decodeMorseCode(helloWorldMorse,44);
 
     return 0;
 }
