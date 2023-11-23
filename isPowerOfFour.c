@@ -1,26 +1,41 @@
 #include "isPowerOfFour.h"
 #include <math.h>
 
-uint32_t isPowerOfFour(uint32_t number)
+static uint32_t factorial(uint32_t n)
 {
     uint32_t res = 0U;
-    if((number < 50000U) && (number >= 4U))
+    if (n <= 25u)
     {
-        uint32_t i = 1U;
-        while((4*i) <= number)
+        if (n == 0)
         {
-            i++;
+            res = 1u;
         }
-        if(number == (uint32_t)pow((double_t)4,(double_t)i))
+        else
         {
-            res = 1U;
-        }else
-        {
-            res = 0U;
+            res = 1;
+            for (uint32_t i = 1u; i <= n; i++)
+            {
+                res *= i;
+            }
         }
-    }else
+    }
+    else
     {
         res = 0U;
+    }
+    return (res);
+}
+
+uint32_t numberOfCombinations(uint32_t n, uint32_t k)
+{
+    uint32_t res = 0u;
+    if ((n <= 25u) && (k <= 25u) && (n >= k))
+    {
+        res = factorial(n) / ((factorial(k) * factorial(n - k)));
+    }
+    else
+    {
+        res = 0u;
     }
     return (res);
 }
