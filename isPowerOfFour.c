@@ -40,32 +40,25 @@ static uint32_t isTheSameString(const char *str1, const char *str2)
     return result;
 }
 
-static uint32_t isString(const char *str)
+static uint32_t isMorseString(const char *str)
 {
     uint32_t res = 0U;
     uint32_t i = 0U;
-    if (str == NULL)
+    if (str == NULL) /* Validating parameter input */
     {
         res = 0U; // Handle NULL pointer
     }
     else
     {
-        while (str[i] != '\0')
+        for(uint32_t i =0U; i <=5U; i++)
         {
-            i++;
-        }
-
-        if (str[i] == '\0')
-        {
-            res = 1U; // It's a string
-        }
-        else
-        {
-            res = 0U;
-            ; // Not a string
+            if(str[i] == '\0')
+            {
+                res = 1U;
+                break;
+            }
         }
     }
-
     return res;
 }
 
@@ -74,11 +67,11 @@ static char morseCodeToChar(const char *codeMorse)
     bool isMatched = false;
     uint32_t countChar = 0U;
     char res = (char)0U;
-    if (isString(codeMorse) == 1U)
+    if (isMorseString(codeMorse) == 1U)
     {
         while ((isMatched == false) && (countChar < (MAX_CHAR - 1)))
         {
-            if (isString(morse[countChar]) == 1U)
+            if (isMorseString(morse[countChar]) == 1U)
             {
                 if (strcmp(codeMorse, morse[countChar]) == (int32_t)0)
                 {
