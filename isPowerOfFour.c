@@ -7,38 +7,7 @@
 static const char *morse[MAX_CHAR] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"};
 static char character[MAX_CHAR] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
 
-/**
- * @brief Compares two strings for equality.
- *
- * This function compares two strings to check if they are the same. 
- * It checks each character of both strings one by one. If all characters are the same and the lengths of both strings are the same, it returns 1, otherwise it returns 0.
- * The function also validates the input strings. If either or both of the input strings are NULL, the function will return 0.
- *
- * @param str1 The first string to be compared. It should be a valid null-terminated string.
- * @param str2 The second string to be compared. It should be a valid null-terminated string.
- * @return Returns 1 if both strings are the same, otherwise returns 0.
- */
-static uint32_t isTheSameString(const char *str1, const char *str2)
-{
-    uint32_t result = 0u; // Initialize result to 0 (strings are not the same)
 
-    // Check if both strings are not NULL
-    if (str1 != NULL && str2 != NULL)
-    {
-        // Compare strings
-        for (; *str1 == *str2; ++str1, ++str2)
-        {
-            // If we reach the end of both strings, they are the same
-            if (*str1 == '\0')
-            {
-                result = 1u; // Strings are the same
-                break;
-            }
-        }
-    }
-
-    return result;
-}
 
 static uint32_t isMorseString(const char *str)
 {
@@ -46,7 +15,7 @@ static uint32_t isMorseString(const char *str)
     uint32_t i = 0U;
     if (str == NULL) /* Validating parameter input */
     {
-        res = 0U; // Handle NULL pointer
+        res = 0U; 
     }
     else
     {
