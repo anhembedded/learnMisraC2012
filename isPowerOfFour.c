@@ -12,7 +12,7 @@ static char character[MAX_CHAR] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
 static uint32_t isMorseString(const char *str)
 {
     uint32_t res = 0U;
-    uint32_t i = 0U;
+ 
     if (str == NULL) /* Validating parameter input */
     {
         res = 0U; 
@@ -21,7 +21,7 @@ static uint32_t isMorseString(const char *str)
     {
         for(uint32_t i =0U; i <=5U; i++)
         {
-            if(str[i] == '\0')
+            if(str[i] == (const char)'\0')
             {
                 res = 1U;
                 break;

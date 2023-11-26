@@ -1,0 +1,7 @@
+#ifndef E07EB48C_414D_400C_9F11_D6C0EBC98B3C
+#define E07EB48C_414D_400C_9F11_D6C0EBC98B3C
+
+
+const char *text_to_binary(const char *text);
+
+#endif /* E07EB48C_414D_400C_9F11_D6C0EBC98B3C */

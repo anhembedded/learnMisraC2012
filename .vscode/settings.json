@@ -6,6 +6,7 @@
         "stdint.h": "c",
         "ispoweroffour.h": "c",
         "stdio.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "text_to_binary.h": "c"
     }
 }
