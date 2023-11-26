@@ -7,6 +7,8 @@
         "ispoweroffour.h": "c",
         "stdio.h": "c",
         "stdbool.h": "c",
-        "text_to_binary.h": "c"
+        "text_to_binary.h": "c",
+        "stddef.h": "c",
+        "codelearnio.h": "c"
     }
 }
