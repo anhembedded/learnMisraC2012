@@ -57,7 +57,6 @@ static char morseCodeToChar(const char *codeMorse)
 
     return res;
 }
-
 char *decodeMorseCode(const char *s, uint32_t numbOfString)
 {
     char tempChar[5U] = {(char)0U};

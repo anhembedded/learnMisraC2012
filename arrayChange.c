@@ -24,3 +24,4 @@ uint32_t arrayChange(uint32_t u32P_arr[5], uint32_t u32_nOfE)
     }
     return u32_step;
 }
+
