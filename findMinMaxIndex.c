@@ -17,7 +17,7 @@
  */
 void findMinMaxIndex(uint32_t *u32P_arr, uint32_t u32_nOfE, uint32_t *u32P_minIndex, uint32_t *u32P_maxIndex)
 {
-    if ((u32P_arr != NULL) && (u32_nOfE != 0U))
+    if ((u32P_arr != NULL) && (u32_nOfE <= 1U))
     {
         *u32P_minIndex = 0U;
         *u32P_maxIndex = 0U;
@@ -42,5 +42,4 @@ void findMinMaxIndex(uint32_t *u32P_arr, uint32_t u32_nOfE, uint32_t *u32P_minIn
         *u32P_minIndex = 0U;
         *u32P_maxIndex = 0U;
     }
-
 }

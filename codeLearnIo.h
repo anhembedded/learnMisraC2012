@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 
-bool isSortArrray(uint32_t *arr, uint32_t nOfE);
+bool isSortArray(uint32_t *arr, uint32_t nOfE);
 uint32_t arrayChange(uint32_t u32P_arr[5], uint32_t u32_nOfE);
 bool isValidParentheses(const char *chrP_messg, uint32_t u32_messgBound);
 
