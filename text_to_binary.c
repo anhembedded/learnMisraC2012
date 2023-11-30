@@ -44,13 +44,13 @@ const char *text_to_binary(const char *text)
     }
     else
     {
-        uint32_t strLenght = u32_StrLenLimit100Char(text);
+        uint32_t strLength = u32_StrLenLimit100Char(text);
         static char buffer[MAX_BUFFER] = {'\0'};
         uint32_t textIndex = 0U;
         uint32_t bufferIndex = 0U;
-        if (strLenght > 0)
+        if (strLength > 0)
         {
-            while((textIndex <= 20U) && (textIndex <= strLenght))
+            while((textIndex <= 20U) && (textIndex <= strLength))
             {
                 for (uint32_t i = 0U; i <= 7U; i++)
                 {

@@ -10,5 +10,8 @@
         "text_to_binary.h": "c",
         "stddef.h": "c",
         "codelearnio.h": "c"
-    }
+    },
+    "cSpell.words": [
+        "Hoang"
+    ]
 }
