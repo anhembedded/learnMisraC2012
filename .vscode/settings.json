@@ -9,9 +9,28 @@
         "stdbool.h": "c",
         "text_to_binary.h": "c",
         "stddef.h": "c",
-        "codelearnio.h": "c"
+        "codelearnio.h": "c",
+        "*.rh": "c"
     },
     "cSpell.words": [
         "Hoang"
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
+        "*"
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "llvm-header-guard",
+        "altera-unroll-loops",
+        "llvm-include-order",
+        "llvmlibc-restrict-system-libc-headers",
+        "modernize-use-trailing-return-type",
+        "cppcoreguidelines-avoid-c-arrays",
+        "hicpp-avoid-c-arrays",
+        "modernize-avoid-c-arrays",
+        "misc-include-cleaner",
+        "altera-id-dependent-backward-branch",
+        "bugprone-easily-swappable-parameters",
+        "llvmlibc-implementation-in-namespace"
     ]
 }

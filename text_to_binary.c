@@ -1,7 +1,10 @@
 #include "text_to_binary.h"
 #include <stddef.h>
 #include <stdint.h>
-#define MAX_BUFFER 300U
+
+enum {
+   MAX_BUFFER = 300U
+};
 
 static const char *name = "Tran Hoang Anh";
 #define BIT_READ(byte, bit) (((byte) >> (bit)) & 1U)
