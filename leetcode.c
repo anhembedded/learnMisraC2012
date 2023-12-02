@@ -41,13 +41,22 @@ int64_t removeDuplicate(uint32_t u32_Array[ARR_MAX_SIZE], uint32_t u32_numOfE)
     }
     return s64_sizeOfArray_Elem;
 }
-
-int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t numOfE)
+/**
+ * @brief Find the majority element in an array using Moore's Voting Algorithm.
+ *
+ * This function finds the majority element in an array using Moore's Voting Algorithm.
+ * If a majority element exists, it returns the majority element. Otherwise, it returns -1.
+ *
+ * @param u8_arr Pointer to the array.
+ * @param u32_numOfE Number of elements in the array.
+ * @return The majority element if it exists, otherwise -1.
+ */
+int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t u32_numOfE)
 {
     int32_t s32_majority = 0;
     uint16_t u16_count = 1U;
 
-    if (numOfE > (uint32_t)ARR_MAX_SIZE)
+    if (u32_numOfE > (uint32_t)ARR_MAX_SIZE)
     {
         /*!Note: input validation */
         s32_majority = (int32_t)-1;
@@ -77,7 +86,7 @@ int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t numOfE)
         }
         /* verify majority number's frequency is more than half */
         uint16_t u16_majorityCountCheck = 0U;
-        for (uint32_t i = 0U; i < numOfE; i++)
+        for (uint32_t i = 0U; i < u32_numOfE; i++)
         {
             if (s32_majority == (int32_t)u8_arr[i])
             {
@@ -88,7 +97,7 @@ int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t numOfE)
                 /* for Misra rule */
             }
         }
-        if (u16_majorityCountCheck >= ((uint16_t)(numOfE / 2)))
+        if (u16_majorityCountCheck >= ((uint16_t)(u32_numOfE / 2)))
         {
             /*do Nothing, verify pass*/
         }
