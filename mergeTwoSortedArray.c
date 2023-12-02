@@ -13,41 +13,41 @@
  * @param s64_nums3 The merged sorted array.
  * @param s64_nums3Size The size of the merged sorted array.
  */
-void merge2SortedArray(int64_t s64_nums1[300] ,int64_t s64_nums1Size, int64_t s64_nums2[300], int64_t s64_nums2Size, int64_t s64_nums3[600], int64_t s64_nums3Size) {
+void merge2SortedArray(int64_t const s64_nums1[ARR_MAX_SIZE] ,int64_t s64_nums1Size, int64_t const s64_nums2[ARR_MAX_SIZE], int64_t s64_nums2Size, int64_t s64_nums3[ARR_MAX_SIZE * 2], int64_t s64_nums3Size) {
    
-    if((s64_nums1Size >= 300) && (s64_nums2Size >= 300) && (s64_nums3Size >= 600))
+    if((s64_nums1Size >= ARR_MAX_SIZE) && (s64_nums2Size >= ARR_MAX_SIZE) && (s64_nums3Size >= ((int64_t)ARR_MAX_SIZE *2U)))
     {
         return;
     }
-    int64_t i = 0;
-    int64_t j = 0;
-    int64_t k = 0;
-    while((i < s64_nums1Size) && (j < s64_nums2Size))
+    int64_t s64_i = 0;
+    int64_t s64_j = 0;
+    int64_t s64_k = 0;
+    while((s64_i < s64_nums1Size) && (s64_j < s64_nums2Size))
     {
-        if(s64_nums1[i] < s64_nums2[j])
+        if(s64_nums1[s64_i] < s64_nums2[s64_j])
         {
-            s64_nums3[k] = s64_nums1[i];
-            i++;
-            k++;
+            s64_nums3[s64_k] = s64_nums1[s64_i];
+            s64_i++;
+            s64_k++;
         }
         else
         {
-            s64_nums3[k] = s64_nums2[j];
-            j++;
-            k++;
+            s64_nums3[s64_k] = s64_nums2[s64_j];
+            s64_j++;
+            s64_k++;
         }
     }
-    while(i < s64_nums1Size)
+    while(s64_i < s64_nums1Size)
     {
-        s64_nums3[k] = s64_nums1[i];
-        i++;
-        k++;
+        s64_nums3[s64_k] = s64_nums1[s64_i];
+        s64_i++;
+        s64_k++;
     }
-    while(j < s64_nums2Size)
+    while(s64_j < s64_nums2Size)
     {
-        s64_nums3[k] = s64_nums2[j];
-        j++;
-        k++;
+        s64_nums3[s64_k] = s64_nums2[s64_j];
+        s64_j++;
+        s64_k++;
     }
    
 };

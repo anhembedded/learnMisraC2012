@@ -8,20 +8,20 @@
  * @param num The number to be checked.
  * @return true if the number is a perfect square, false otherwise.
  */
-static inline bool isPerfectSquare(int num)
+static inline bool isPerfectSquare(int32_t num)
 {
     if (num < 1)
     {
         return false;
     }
-    int i = 1;
-    while (((i * i) <= num) && (i <= 100))
+    int32_t s32_i = 1;
+    while (((s32_i * s32_i) <= num) && (s32_i <= 100))
     {
-        if ((i * i) == num)
+        if ((s32_i * s32_i) == num)
         {
             return true;
         }
-        i++;
+        s32_i++;
     }
     return false;
 }
@@ -33,22 +33,22 @@ static inline bool isPerfectSquare(int num)
  * If a perfect square is found, its value is added to the sum.
  * Finally, it divides the sum by the number of perfect square numbers found to get the average.
  * 
- * @param u32P_array Pointer to the array.
+ * @param u32_array Pointer to the array.
  * @param u32_nOfE Number of elements in the array.
  * @return The average of the perfect square numbers. If no perfect square numbers are found, return 0.
  */
-uint32_t avgPerfectSquareArray(uint32_t u32P_array[100], uint32_t u32_nOfE)
+uint32_t avgPerfectSquareArray(uint32_t u32_array[100], uint32_t u32_nOfE)
 {
-    if ((u32P_array == NULL) || (u32_nOfE >= 100U) || (u32_nOfE == 0U))
+    if ((u32_array == NULL) || (u32_nOfE >= 100U) || (u32_nOfE == 0U))
     {
         return 0U;
     }
     uint32_t u32_sum = 0U;
     for (uint32_t i = 0U; i < u32_nOfE; i++)
     {
-        if (isPerfectSquare(u32P_array[i]))
+        if (isPerfectSquare((int32_t)u32_array[i]))
         {
-            u32_sum = u32_sum + u32P_array[i];
+            u32_sum = u32_sum + u32_array[i];
         }
     }
     u32_sum = u32_sum / u32_nOfE;

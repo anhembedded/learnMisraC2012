@@ -9,32 +9,93 @@
  * Finally, the function returns the new size of the array after removing the duplicates.
  *
  * @param u32_Array Pointer to the array.
- * @param numOfE Number of elements in the array.
+ * @param u32_numOfE Number of elements in the array.
  * @return The new size of the array after removing the duplicates.
  */
-int32_t removeDuplicate(uint32_t u32_Array[1000], uint32_t numOfE)  
+int64_t removeDuplicate(uint32_t u32_Array[ARR_MAX_SIZE], uint32_t u32_numOfE)
 {
-    int64_t u64_sizeOfArray_Elem = numOfE;
-    if(numOfE > 1000U)
+    int64_t s64_sizeOfArray_Elem = (int64_t)u32_numOfE;
+    if (u32_numOfE > (uint32_t)ARR_MAX_SIZE)
     {
-        u64_sizeOfArray_Elem = (int32_t)-1;
-    }else
+        s64_sizeOfArray_Elem = (int32_t)-1;
+    }
+    else
     {
         uint32_t u32_currentHead = 0U;
-        while(u32_currentHead < u64_sizeOfArray_Elem)
+        while ((int64_t)u32_currentHead < s64_sizeOfArray_Elem)
         {
-            for(uint32_t u32_i = u32_currentHead + 1U; u32_i < u64_sizeOfArray_Elem; u32_i++)
+            for (uint32_t u32_i = u32_currentHead + 1U; (int64_t)u32_i < s64_sizeOfArray_Elem; u32_i++)
             {
-                if(u32_Array[u32_currentHead] == u32_Array[u32_i])
+                if (u32_Array[u32_currentHead] == u32_Array[u32_i])
                 {
-                    u32_Array[u32_i] = u32_Array[u64_sizeOfArray_Elem - 1U];
-                    u64_sizeOfArray_Elem--;
-                }else { /* for Misra rule */ }
+                    u32_Array[u32_i] = u32_Array[s64_sizeOfArray_Elem - (int64_t)1U];
+                    s64_sizeOfArray_Elem--;
+                }
+                else
+                { 
+                    /* for Misra rule */
+                }
             }
             u32_currentHead++;
         }
     }
-    
-    return u64_sizeOfArray_Elem;
+    return s64_sizeOfArray_Elem;
 }
 
+int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t numOfE)
+{
+    int32_t s32_majority = 0;
+    uint16_t u16_count = 1U;
+
+    if (numOfE > (uint32_t)ARR_MAX_SIZE)
+    {
+        /*!Note: input validation */
+        s32_majority = (int32_t)-1;
+    }
+    else
+    {
+        s32_majority = (int32_t)u8_arr[0];
+        for (uint32_t i = 0; i <= (uint32_t)ARR_MAX_SIZE; i++)
+        {
+            if (s32_majority == (int32_t)u8_arr[i])
+            {
+                u16_count++;
+            }
+            else
+            {
+                u16_count--;
+            }
+            if (u16_count == 0U)
+            {
+                u16_count = 1U;
+                s32_majority = (int32_t)u8_arr[i];
+            }
+            else
+            {
+                /* for Misra rule */
+            }
+        }
+        /* verify majority number's frequency is more than half */
+        uint16_t u16_majorityCountCheck = 0U;
+        for (uint32_t i = 0U; i < numOfE; i++)
+        {
+            if (s32_majority == (int32_t)u8_arr[i])
+            {
+                u16_majorityCountCheck++;
+            }
+            else
+            {
+                /* for Misra rule */
+            }
+        }
+        if (u16_majorityCountCheck >= ((uint16_t)(numOfE / 2)))
+        {
+            /*do Nothing, verify pass*/
+        }
+        else
+        {
+            s32_majority = -1;
+        }
+    }
+    return (s32_majority);
+}

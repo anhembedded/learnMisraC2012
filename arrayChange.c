@@ -1,10 +1,10 @@
 #include "codeLearnIo.h"
 
-uint32_t arrayChange(uint32_t u32P_arr[5], uint32_t u32_nOfE)
+uint32_t arrayChange(uint32_t u32P_arr[ARR_MAX_SIZE], uint32_t u32_nOfE)
 {
     uint32_t u32_step = 0U;
     int64_t s32_diff = 0U;
-    if ((u32P_arr != NULL) && (u32_nOfE == 5U))
+    if ((u32P_arr != NULL) && (u32_nOfE == ARR_MAX_SIZE))
     {
         for (uint32_t i = 0; i < (u32_nOfE - 1U); i++)
         {

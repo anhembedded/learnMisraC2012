@@ -14,11 +14,11 @@
  * @param val The value to be removed from the array.
  * @return The new size of the array after removing the specified value.
  */
-int32_t removeElement(int32_t s32_array[500U], uint32_t arraySize,
+int32_t removeElement(int32_t s32_array[ARR_MAX_SIZE], uint32_t arraySize,
                       int32_t val) {
   uint32_t u32_i = 0U;
   uint32_t count = 0U;
-  if (arraySize > 500) {
+  if (arraySize > ARR_MAX_SIZE) {
     count = -1;
   } else {
 

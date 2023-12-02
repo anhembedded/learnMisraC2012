@@ -31,6 +31,12 @@
         "misc-include-cleaner",
         "altera-id-dependent-backward-branch",
         "bugprone-easily-swappable-parameters",
-        "llvmlibc-implementation-in-namespace"
+        "llvmlibc-implementation-in-namespace",
+        "clang-diagnostic-error",
+        "clang-diagnostic-error",
+        "clang-diagnostic-error",
+        "clang-diagnostic-error",
+        "clang-diagnostic-error",
+        "clang-diagnostic-error"
     ]
 }
