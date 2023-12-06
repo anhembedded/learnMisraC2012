@@ -50,4 +50,4 @@ void merge2SortedArray(int64_t const s64_nums1[ARR_MAX_SIZE] ,int64_t s64_nums1S
         s64_k++;
     }
    
-};
+}

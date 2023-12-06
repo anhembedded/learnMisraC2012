@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.cps": "javascript",
         "countbitone.h": "c",
         "cstddef": "c",
         "yvals_core.h": "c",
@@ -10,7 +11,9 @@
         "text_to_binary.h": "c",
         "stddef.h": "c",
         "codelearnio.h": "c",
-        "*.rh": "c"
+        "*.rh": "c",
+        "math.h": "c",
+        "string.h": "c"
     },
     "cSpell.words": [
         "Hoang"
@@ -32,6 +35,7 @@
         "altera-id-dependent-backward-branch",
         "bugprone-easily-swappable-parameters",
         "llvmlibc-implementation-in-namespace",
+        "clang-diagnostic-error",
         "clang-diagnostic-error",
         "clang-diagnostic-error",
         "clang-diagnostic-error",
