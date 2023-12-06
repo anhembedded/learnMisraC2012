@@ -14,7 +14,7 @@
  * @param nOfE Number of elements in the array.
  * @return true if the array is sorted, false otherwise.
  */
-bool isSortArray(uint32_t *arr, uint32_t nOfE)
+bool isSortArray(const uint32_t *arr, uint32_t nOfE)
 {
     bool result = false;
     bool isIncreasing = true;

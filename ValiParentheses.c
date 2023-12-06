@@ -1,6 +1,8 @@
 #include "codeLearnIo.h"
 
-#define MAX_SIZE 100
+enum {
+MAX_SIZE = 100
+};
 
 /**
  * @brief A structure to represent a stack
@@ -86,14 +88,17 @@ bool isValidParentheses(const char *chrP_messg, uint32_t u32_messgBound)
             {
                 //! Note: fix that error 
                 char stackPop = pop(&stackMessg);
-                if (chr_temp != (stackPop - 2u))
+                if (chr_temp != (stackPop - 2U))
                 {
                     isValid = false;
                     break;
-                }
-                else
+                }  else
                 {
+                    /*for Misra rule*/
                 }
+                
+                
+               
             }
             else
             {

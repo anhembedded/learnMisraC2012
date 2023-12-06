@@ -1,6 +1,6 @@
 #include "codeLearnIo.h"
 
-uint32_t arrayChange(uint32_t u32P_arr[ARR_MAX_SIZE], uint32_t u32_nOfE)
+uint32_t arrayChange(const uint32_t u32P_arr[ARR_MAX_SIZE], uint32_t u32_nOfE)
 {
     uint32_t u32_step = 0U;
     int64_t s32_diff = 0U;

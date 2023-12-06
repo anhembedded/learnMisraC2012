@@ -25,8 +25,8 @@ static uint32_t u32_StrLenLimit100Char(const char *str)
     {
         return 0U;
     }
-    else
-    {
+    
+    
         while ((count < 100) && (str[count] != (const char)'\0'))
         {
             count++;
@@ -35,7 +35,7 @@ static uint32_t u32_StrLenLimit100Char(const char *str)
         {
             count = 0U;
         }
-    }
+   
     return count;
 }
 

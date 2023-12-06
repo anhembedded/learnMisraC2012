@@ -3,7 +3,9 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define MAX_CHAR 36U
+enum {
+MAX_CHAR = 36U
+};
 static const char *morse[MAX_CHAR] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"};
 static char character[MAX_CHAR] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
 
@@ -62,7 +64,7 @@ char *decodeMorseCode(const char *s, uint32_t numbOfString)
     char tempChar[5U] = {(char)0U};
     uint32_t tempCharIndex = 0U;
     bool spaceFlag = false;
-    static char mess[300] = {(char)0u};
+    static char mess[300] = {(char)0U};
     uint32_t mesIndex = 0U;
 
     if ((s != NULL) && (numbOfString >= 2U))
