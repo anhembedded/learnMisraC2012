@@ -6,7 +6,7 @@
 int main()
 {
     uint32_t arr[10] = {1, 2, 3, 4, 3, 2, 5, 6, 4, 7};
-    uint32_t size = 10;
+    uint32_t size = 10U;
     
     int64_t newSize = removeDuplicate(arr, size);
     

@@ -33,5 +33,5 @@ int32_t removeElement(int32_t s32_array[ARR_MAX_SIZE], uint32_t arraySize,
       }
     }
   }
-  return (count);
+  return ((int32_t)count);
 }

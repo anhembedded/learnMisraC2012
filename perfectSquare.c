@@ -1,4 +1,5 @@
 #include "codeLearnIo.h"
+
 /**
  * @brief Check if a number is a perfect square.
  * 
@@ -15,7 +16,7 @@ static inline bool isPerfectSquare(int32_t num)
         return false;
     }
     int32_t s32_i = 1;
-    while (((s32_i * s32_i) <= num) && (s32_i <= 100))
+    while (((s32_i * s32_i) <= num) && (s32_i <= ARR_MAX_SIZE))
     {
         if ((s32_i * s32_i) == num)
         {
@@ -37,9 +38,9 @@ static inline bool isPerfectSquare(int32_t num)
  * @param u32_nOfE Number of elements in the array.
  * @return The average of the perfect square numbers. If no perfect square numbers are found, return 0.
  */
-uint32_t avgPerfectSquareArray(uint32_t u32_array[100], uint32_t u32_nOfE)
+uint32_t avgPerfectSquareArray(uint32_t u32_array[ARR_MAX_SIZE], uint32_t u32_nOfE)
 {
-    if ((u32_array == NULL) || (u32_nOfE >= 100U) || (u32_nOfE == 0U))
+    if ((u32_array == NULL) || (u32_nOfE >= ARR_MAX_SIZE) || (u32_nOfE == 0U))
     {
         return 0U;
     }
