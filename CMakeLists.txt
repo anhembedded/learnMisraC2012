@@ -8,9 +8,16 @@ message(STATUS "!!!!!!!!!!!!!!!!!Source File Included: ") # Debug
 foreach(VAR ${SOURCES})
     message(STATUS "${VAR}") # Debug
 endforeach()
+message("C Compiler ID: ${CMAKE_C_COMPILER_ID}")
 
-# Set compiler flags
-set(CMAKE_C_FLAGS "-fdiagnostics-color -Wall -Wextra -Wpedantic -pedantic-errors -ggdb -Og")
+if(${CMAKE_C_COMPILER_ID} EQUAL "GNU" ) # GCC
+    # Set compiler flags 
+    set(CMAKE_C_FLAGS "-fdiagnostics-color -Wall -Wextra -Wpedantic -pedantic-errors -ggdb -Og")
+elseif(${CMAKE_C_COMPILER_ID} EQUAL "MSVC")
+    # Set compiler flags
+    set(CMAKE_C_FLAGS "-fdiagnostics-color")
+endif()
+
 add_executable(learnMisraC2012 ${SOURCES})
 
 # Find ClangTidy executable
@@ -29,6 +36,7 @@ if(CLANG_TIDY)
         FIX_C_TIDY
         COMMAND clang-tidy --use-color -checks=${CLANG_CHECK_LIST} --fix --fix-errors  --fix-notes   ${SOURCES} -p ${CMAKE_SOURCE_DIR}/ClangTidyBuild
     )
+    message("CLANG TARGET !!!")
 endif()
 
 # Find Cppcheck executable
@@ -46,4 +54,5 @@ if(CPPCHECK)
         --enable=all # Enable all checks
         ${SOURCES} # Analyze source directory
     )
+    message("CPPCHECK TARGET !!!")
 endif()
