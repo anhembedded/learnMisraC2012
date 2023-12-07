@@ -41,7 +41,8 @@
         "clang-diagnostic-error",
         "clang-diagnostic-error",
         "clang-diagnostic-error",
-        "clang-diagnostic-error"
+        "clang-diagnostic-error",
+        "llvm-header-guard"
     ],
     "C_Cpp.codeAnalysis.clangTidy.args": [
         "false"
