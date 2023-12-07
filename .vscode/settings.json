@@ -16,7 +16,8 @@
         "string.h": "c"
     },
     "cSpell.words": [
-        "Hoang"
+        "Hoang",
+        "LEARNMISRAC"
     ],
     "C_Cpp.codeAnalysis.clangTidy.checks.enabled": [
         "*"
