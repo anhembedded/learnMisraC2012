@@ -16,12 +16,12 @@
  */
 int32_t removeElement(int32_t s32_array[ARR_MAX_SIZE], uint32_t arraySize,
                       int32_t val) {
-  uint32_t u32_i = 0U;
+  
   uint32_t count = 0U;
   if (arraySize > ARR_MAX_SIZE) {
     count = -1;
   } else {
-
+    uint32_t u32_i = 0U;
     while (u32_i < arraySize) {
 
       if (s32_array[u32_i] == val) {

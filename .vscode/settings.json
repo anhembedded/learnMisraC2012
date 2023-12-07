@@ -23,7 +23,6 @@
     ],
     "C_Cpp.codeAnalysis.clangTidy.enabled": true,
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
-        "llvm-header-guard",
         "altera-unroll-loops",
         "llvm-include-order",
         "llvmlibc-restrict-system-libc-headers",
@@ -41,7 +40,10 @@
         "clang-diagnostic-error",
         "clang-diagnostic-error",
         "clang-diagnostic-error",
-        "clang-diagnostic-error",
         "clang-diagnostic-error"
-    ]
+    ],
+    "C_Cpp.codeAnalysis.clangTidy.args": [
+        "false"
+    ],
+    "C_Cpp.autocompleteAddParentheses": true
 }

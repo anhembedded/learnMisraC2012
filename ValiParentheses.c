@@ -15,23 +15,23 @@ typedef struct
 
 /**
  * @brief Initialize a stack
- * @param s Pointer to the stack
+ * @param stkPtr_s Pointer to the stack
  */
-static void init(Stack *s) { s->top = -1; }
+static void init(Stack *stkPtr_s) { stkPtr_s->top = -1; }
 
 /**
  * @brief Check if the stack is empty
- * @param s Pointer to the stack
+ * @param stkPtr_s Pointer to the stack
  * @return true if the stack is empty, false otherwise
  */
-static bool isEmpty(Stack *stkPtr_s) { return stkPtr_s->top == -1; }
+static bool isEmpty(const Stack *stkPtr_s) { return stkPtr_s->top == -1; }
 
 /**
  * @brief Check if the stack is full
  * @param stkPtr_s Pointer to the stack
  * @return true if the stack is full, false otherwise
  */
-static bool isFull(Stack *stkPtr_s) { return stkPtr_s->top == MAX_SIZE - 1; }
+static bool isFull(const Stack *stkPtr_s) { return stkPtr_s->top == MAX_SIZE - 1; }
 
 /**
  * @brief Push an element onto the stack
@@ -95,9 +95,6 @@ bool isValidParentheses(const char *chrP_messg, uint32_t u32_messgBound)
                 }  
                 
                     /*for Misra rule*/
-               
-                
-                
                
             }
             else
