@@ -64,7 +64,7 @@ int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t u32_numOfE)
     else
     {
         s32_majority = (int32_t)u8_arr[0];
-        for (uint32_t i = 0; i <= u32_numOfE; i++)
+        for (uint32_t i = 0; i < u32_numOfE; i++)
         {
             if (s32_majority == (int32_t)u8_arr[i])
             {
@@ -97,7 +97,7 @@ int32_t majorityElement(uint8_t const u8_arr[ARR_MAX_SIZE], uint32_t u32_numOfE)
                 /* for Misra rule */
             }
         }
-        if (u16_majorityCountCheck >= ((uint16_t)(u32_numOfE / 2)))
+        if (u16_majorityCountCheck > ((uint16_t)(u32_numOfE / 2)))
         {
             /*do Nothing, verify pass*/
         }
