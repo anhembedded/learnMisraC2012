@@ -1,6 +1,6 @@
 
 
-file(GLOB SOURCES "*.c" "*.h")
+file(GLOB SOURCES "*.c" "*.h" ${CMAKE_SOURCE_DIR}/inc/*.h)
 message(STATUS "!!!!!!!!!!!!!!!!!Source File Included: ") # Debug
 
 foreach(VAR ${SOURCES})
