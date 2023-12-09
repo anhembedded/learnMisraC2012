@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.26)
-project(learnMisraC2012 C)
+
+project(learnMisraC2012 LANGUAGES C CXX)
+# Add subdirectories for components
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_C_STANDARD 99)
+
 file(GLOB SOURCES "*.c" "*.h")
 message(STATUS "!!!!!!!!!!!!!!!!!Source File Included: ") # Debug
 
@@ -57,3 +60,29 @@ if(CPPCHECK)
     message("CPPCHECK TARGET !!!")
 endif()
 
+add_definitions(-DCMAKE_EXPORT_COMPILE_COMMANDS=ON)
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/b3a9ba2b8e975550799838332803d468797ae2e1.zip
+)
+
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+include(GoogleTest)
+
+
+add_executable(
+  hello_test
+  test.cpp codeLearnIo.h leetcode.c
+)
+target_link_libraries(
+  hello_test
+  GTest::gtest_main
+)
+
+include(GoogleTest)
+
+gtest_add_tests(TARGET hello_test test.cpp AUTO)
