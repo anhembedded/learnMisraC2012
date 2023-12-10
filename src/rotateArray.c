@@ -21,7 +21,7 @@ int32_t s32_rotateArray(int32_t s32arr_nums[ARR_MAX_SIZE], uint32_t u32_numsSize
 {
     int32_t res = 1;
     int32_t temp;
-    const uint32_t u32_firstPos = (u32_numsSize - u32_k) -1;
+    const uint32_t u32_firstPos = (u32_numsSize - u32_k) -1U;
     uint32_t u32_currentIndex = u32_firstPos;
     uint32_t u32_nextIndex = (u32_currentIndex + u32_k) % u32_numsSize;
     if((u32_numsSize <= ARR_MAX_SIZE) && (u32_k <= u32_numsSize))
