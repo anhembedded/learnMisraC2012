@@ -1,0 +1,14 @@
+//
+// Created by PC on 12/12/2023.
+//
+
+#ifndef LEARNMISRAC2012_MERGESTRINGSALTERNATELY_H
+#define LEARNMISRAC2012_MERGESTRINGSALTERNATELY_H
+#include "embeddedSys.h"
+
+uint32_t mergeAlternately(const char *) {
+
+
+}
+
+#endif //LEARNMISRAC2012_MERGESTRINGSALTERNATELY_H
