@@ -6,6 +6,7 @@
 #define LEARNMISRAC2012_MERGESTRINGSALTERNATELY_H
 #include "embeddedSys.h"
 #include <string.h>
+#include "stdlib.h"
 char* mergeAlternately(const char* word1,const char* word2) {
     uint32_t len1 = strlen(word1);
     uint32_t len2 = (int)strlen(word2);
@@ -23,7 +24,7 @@ char* mergeAlternately(const char* word1,const char* word2) {
             result[2*i] = word1[i];
         }
         if (i < len2) {
-            result[2*i+1] = word2[i];
+            result[(2*i)+1] = word2[i];
         }
     }
     result[2*i] = '\0';
