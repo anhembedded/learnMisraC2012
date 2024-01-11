@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.26)
 
 project(learnMisraC2012 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_STANDARD 99)
 
 # Add subdirectories for components
 set(CMAKE_CXX_STANDARD 14)

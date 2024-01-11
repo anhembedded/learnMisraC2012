@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 extern "C" {
-#include "kidWithCandies.h" // replace with your header file name
+#include "kidWithCandies.h"
 }
 
 TEST(KidsWithCandiesTest, HandlesValidInput) {
@@ -40,6 +40,7 @@ TEST(KidsWithCandiesTest, HandlesAllKidsCanHaveMostCandies) {
     ASSERT_EQ(u32_result[1], 1);
     ASSERT_EQ(u32_result[2], 1);
 }
+
 
 TEST(KidsWithCandiesTest, HandlesNoKidsCanHaveMostCandies) {
     const int32_t s32_candies[3] = {9, 10, 11};

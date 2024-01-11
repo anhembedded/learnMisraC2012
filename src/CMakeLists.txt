@@ -1,6 +1,6 @@
 
 
-file(GLOB SOURCES "*.c" "*.h" ${CMAKE_SOURCE_DIR}/inc/*.h)
+file(GLOB SOURCES "*.cpp" "*.hpp" "*.c" "*.h" ${CMAKE_SOURCE_DIR}/inc/*.h)
 message(STATUS "!!!!!!!!!!!!!!!!!Source File Included: ") # Debug
 
 foreach(VAR ${SOURCES})
@@ -54,3 +54,4 @@ if(CPPCHECK)
     )
     message("CPPCHECK TARGET !!!")
 endif()
+
