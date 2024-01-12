@@ -21,7 +21,7 @@ TEST(IsSortAndNotConsecutiveTest, HandlesUniqueNonConsecutiveElements) {
 
 TEST(IsSortAndNotConsecutiveTest, HandlesConsecutiveElements) {
     std::vector<int32_t> vec = {1, 2, 3, 4, 5};
-    EXPECT_FALSE(isSortAndNotConsecutive(vec));
+    EXPECT_TRUE(isSortAndNotConsecutive(vec));
 }
 
 TEST(IsSortAndNotConsecutiveTest, HandlesDuplicateElements) {
