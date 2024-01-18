@@ -23,7 +23,7 @@
 std::vector<std::string> capitalizeFirstChar(std::vector<std::string> &vectStr) {
     std::vector<std::string> res = vectStr;
     if (vectStr.empty() == true) {
-
+        // input validating fail
     } else {
         std::for_each(res.begin(), res.end(), [](std::string &str) {
             str[0] = static_cast<char>(toupper(str[0]));
@@ -50,7 +50,7 @@ std::vector<std::string> capitalizeFirstChar(std::vector<std::string> &vectStr) 
 std::list<std::string> capitalizeFirstChar(std::list<std::string> &listStr) {
     std::list<std::string> res = listStr;
     if (listStr.empty() == true) {
-
+    // input validating fail
     } else {
         std::for_each(res.begin(), res.end(), [](std::string &str) {
             str[0] = static_cast<char>(toupper(str[0]));
@@ -81,24 +81,67 @@ std::list<std::string> capitalizeFirstChar(std::list<std::string> &listStr) {
  * // result will be true because "HelloWorld" contains 'o', 'l', 'e'.
  * @endcode
  */
-bool isFirstStrContainsAll(std::vector<std::string> vectString) {
+//! Note: didn't test yet
+bool isFirstStrContainsAll(std::vector<std::string> &vectString) {
     bool res = false;
     if (vectString.size() != 2) {
-        //Input validating
+        // input validating fail
     } else {
         std::for_each(vectString.at(1).begin(), vectString.at(1).end(),
-                      [&](char &c)->void {
-           auto conditionOne = vectString.at(0).find(static_cast<char >(tolower(c))) == std::string::npos;
-           auto conditionTow  = vectString.at(0).find(static_cast<char >(toupper(c))) == std::string::npos;
-           if(conditionOne && conditionTow)
-           {
-               res = false;
-           }else
-           {
-               res = true;
-           }
+                      [&](char &c) -> void {
+                          auto conditionOne =
+                                  vectString.at(0).find(static_cast<char >(tolower(c))) == std::string::npos;
+                          auto conditionTow =
+                                  vectString.at(0).find(static_cast<char >(toupper(c))) == std::string::npos;
+                          if (conditionOne && conditionTow) {
+                              res = false;
+                          } else {
+                              res = true;
+                          }
 
-        });
+                      });
     };
     return res;
 }
+/**
+ * @brief Filters and returns strings that contain at least one digit from the input vector.
+ *
+ * This function examines each string in the provided vector and adds it to the result vector
+ * if it contains at least one numeric character (0-9). The check is performed using `std::isdigit`.
+ *
+ * @param vectStr A reference to a vector of strings to be checked for numeric content.
+ *
+ * @return A vector of strings that contains all strings from the input vector that have at least one digit.
+ *
+ * @note If the input vector is empty, the function returns an empty vector.
+ *
+ * Usage example:
+ * @code
+ * std::vector<std::string> vect = {"abc", "123", "a1b2"};
+ * std::vector<std::string> filteredVect = isContainNumberInStr(vect);
+ * // filteredVect will contain {"123", "a1b2"}
+ * @endcode
+ */
+//! Note: didn't test yet
+std::vector<std::string> isContainNumberInStr(std::vector<std::string> &vectStr) {
+    std::vector<std::string> res;
+    if (vectStr.empty() == true) {
+        // input validating fail
+    } else {
+        std::for_each(vectStr.begin(), vectStr.end(),
+                      [&](std::string &str) -> void
+                      {
+                          for (auto &c: str)
+                          {
+                              if (std::isdigit(c))
+                              {
+                                  res.push_back(str);
+                              }
+                          }
+                      }
+                      );
+    }
+    return res;
+}
+
+

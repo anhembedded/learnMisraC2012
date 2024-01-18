@@ -1,6 +1,6 @@
 
 file(GLOB
-        SOURCES
+        SOURCES_Gtest
         "*.cpp"
         "*.hpp"
         ${CMAKE_SOURCE_DIR}/inc/*.h
@@ -8,7 +8,7 @@ file(GLOB
         ${CMAKE_SOURCE_DIR}/inc/*.hpp
         ${CMAKE_SOURCE_DIR}/src/*.cpp
 )
-
+list(REMOVE_ITEM SOURCES_Gtest "main.cpp")
 include(FetchContent) 
 
 FetchContent_Declare(
@@ -25,7 +25,7 @@ include(GoogleTest)
 
 add_executable(
   G_TEST
-  ${SOURCES}
+  ${SOURCES_Gtest}
 )
 target_link_libraries(
     G_TEST
@@ -34,4 +34,4 @@ target_link_libraries(
 
 include(GoogleTest)
 
-gtest_add_tests(TARGET G_TEST ${SOURCES} AUTO)
+gtest_add_tests(TARGET G_TEST ${SOURCES_Gtest} AUTO)
