@@ -164,8 +164,9 @@ std::string highest_repeated_letters(std::string str)
     return maxWord;
 }
 
-std::string insert_dash_after_odd(std::string &str)
-{
+
+
+std::string insert_dash_after_odd(std::string &str) {
     const std::string oddNumStr = "13579";
     std::string strRes;
     if(str.empty() == true)
@@ -178,7 +179,7 @@ std::string insert_dash_after_odd(std::string &str)
         {
             if(oddNumStr.find(*iter) != std::string::npos)
             {
-                iter = charList.insert(iter, '-');
+                iter = charList.insert(std::next(iter), '-');
             } else
             {
                 // do nothing, misra C rule 18.5
@@ -188,3 +189,35 @@ std::string insert_dash_after_odd(std::string &str)
     }
     return strRes;
 }
+
+//Write a C++ program to change the case (lower to upper and upper to lower cases) of each character in a given string.
+std::string changeCase(std::string str) {
+    std::string strRes;
+    if(str.empty() == true)
+    {
+        // input validating fail
+    }else
+    {
+        std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+        strRes = str;
+    }
+    return strRes;
+}
+int sumAllNumInString(std::string &str)
+{
+    int sumAll = 0;
+    if(str.empty() == true)
+    {
+        // input validating fail
+    }else
+    {
+        std::stringstream ss_str(str);
+        int tempNum = 0;
+        while(ss_str >> tempNum)
+        {
+            sumAll = sumAll + tempNum;
+        }
+    }
+    return sumAll;
+}
+

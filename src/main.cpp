@@ -5,10 +5,10 @@
 #include "algorithm"
 #include "stringManipulation.hpp"
 using namespace std;
-
+std::string num = "1A2AB2 32";
 int main() {
 
-    std::cout << u32_countWords("After eagling the Road Hole on Thursday, he missed an 8-footer for birdie Friday.");
+    std::cout << sumAllNumInString(num)<< std::endl;
     return 0;
 
 }
